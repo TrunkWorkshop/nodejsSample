@@ -1,16 +1,16 @@
 build:
-  container_name: picklete_build
+  container_name: nodejsSample_build
   image: miiixr/picklete_env
   extends:
     file: ./dockerConfig/development.yml
     service: build
 
-  working_dir: /picklete
+  working_dir: /nodejsSample
   volumes:
-    - ./:/picklete
+    - ./:/nodejsSample
 
 test:
-  container_name: picklete_test
+  container_name: nodejsSample_test
   image: miiixr/picklete_env
   extends:
     file: ./dockerConfig/development.yml
@@ -24,7 +24,7 @@ test:
     - ./:/picklete
 
 web:
-  container_name: picklete
+  container_name: nodejsSample
   image: miiixr/picklete_env
   extends:
     file: ./dockerConfig/development.yml
@@ -33,9 +33,9 @@ web:
   external_links:
     - mysql
 
-  working_dir: /picklete
+  working_dir: /nodejsSample
   volumes:
-    - ./:/picklete
+    - ./:/nodejsSample
 
   restart: always
 

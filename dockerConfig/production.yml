@@ -16,7 +16,7 @@ mysql:
     - "3306:3306"
   environment:
     MYSQL_ADMIN_PASS: "root"
-    MYSQL_USER_NAME: "picklete"
-    MYSQL_USER_DB: "picklete_prod"
-    MYSQL_USER_PASS: "picklete"
+    MYSQL_USER_NAME: "nodejsSample"
+    MYSQL_USER_DB: "nodejsSample_prod"
+    MYSQL_USER_PASS: "nodejsSample"
     CREATE_MYSQL_BASIC_USER_AND_DB: "true"
