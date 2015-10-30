@@ -1,4 +1,4 @@
-FROM picklete/picklete_env
+FROM miiixr/picklete_env
 COPY ./ /nodjsSample
 WORKDIR /nodjsSample
 
