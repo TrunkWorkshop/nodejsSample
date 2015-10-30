@@ -1,6 +1,6 @@
-FROM smlsunxie/picklete_env
-COPY ./ /picklete
-WORKDIR /picklete
+FROM picklete/picklete_env
+COPY ./ /nodjsSample
+WORKDIR /nodjsSample
 
 RUN /bin/bash -l -c 'npm i'
 RUN /bin/bash -l -c 'node_modules/.bin/grunt prod'

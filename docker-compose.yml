@@ -1,9 +1,7 @@
 build:
   container_name: nodejsSample_build
   image: miiixr/picklete_env
-  extends:
-    file: ./dockerConfig/development.yml
-    service: build
+  command: "/bin/bash -l -c 'npm i && node_modules/.bin/grunt buildDev'"
 
   working_dir: /nodejsSample
   volumes:
